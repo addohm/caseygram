@@ -58,7 +58,7 @@ class PostDetailView(LoginRequiredMixin, DetailView):
 
 @login_required
 def post(request):
-    ImageFormSet = modelformset_factory(PostImage, fields=('modelimage',), labels={'modelimage': 'Image'}, extra=3, min_num=1)
+    ImageFormSet = modelformset_factory(PostImage, fields=('modelimage',), labels={'modelimage': 'Image'}, extra=10, min_num=1)
     if request.method == 'POST':
 
         postForm = PostForm(request.POST)
