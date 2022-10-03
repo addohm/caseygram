@@ -24,7 +24,7 @@ from users.forms import CustomAuthForm
 # http request starts here and tries to match url patterns stopping on first match
 
 urlpatterns = [
-    path('casey/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
     path('messages/', include('directmessages.urls')),
     path('profile/edit/', user_views.profile, name='profile'),
